@@ -15,67 +15,32 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-}
-@property --rotate {
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
-}
-@keyframes borderanimate{ 
-    from{
-        --rotate:0deg;
-    }
-    to{
-        --rotate:360deg;
-    }
-}
-.box{
-    height:350px;
-    width:250px;
-    display: flex;
-    flex-direction: column;
-    gap:10px;
-    border:0px solid transparent;
-    padding: 5px;
-    border-radius: 10px;
-    background: 
-    linear-gradient(black) padding-box,
-    conic-gradient(from var(--rotate) ,black, black , black) border-box;
-    box-shadow: 0 0 0px rgb(138, 24, 142) ;
-    transition: all 0.3s linear;
-    animation: borderanimate 5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-}
-
-img{
-    height: 70%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 10px;
+    anchor-name:--some-anchor;
 
 }
-h2{
-    color: rgb(182, 27, 187);
-    text-shadow: 0 0 0px rgb(138, 24, 142);
-}
-p{
-    color: rgb(182, 27, 187);
-    text-shadow: 0 0 0px rgb(138, 24, 142);
-}
-.box:hover{
-border:2px solid transparent;
-box-shadow: 0 0 50px rgb(138, 24, 142) ;
-background: linear-gradient(black) padding-box, 
-conic-gradient( from var(--rotate ), black, rgb(237, 5, 229) , black) border-box;
-
+.nav{
+    width: 100px;
+    height:40px;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
     
     
 }
-.box:hover h2 {
-  text-shadow: 0 0 20px rgb(247, 18, 255);
+.nav:hover{
+  anchor-name:--some-anchor;
 }
-
-.box:hover p {
-  text-shadow: 0 0 20px rgb(247, 18, 255);
+.anchor{
+    background-color: rgb(65, 64, 64);
+    border-radius: 20px;
+    position: absolute;
+    top:anchor(top);
+    left:anchor(left);
+    right:anchor(right);
+    bottom:anchor(bottom);
+    position-anchor: --some-anchor;
+    pointer-events: none;
+    mix-blend-mode: difference;
+    transition:all 0.3s linear;
 }
