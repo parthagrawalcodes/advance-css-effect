@@ -12,35 +12,28 @@ html, body {
 }
 body{
     background-color: black;
-    display: flex;
+    display:flex;
     justify-content: center;
     align-items: center;
-    anchor-name:--some-anchor;
-
+    gap: 20px;
 }
-.nav{
-    width: 100px;
-    height:40px;
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-    text-align: center;
-    
-    
+.box{
+    height:200px;
+    width:200px;
+    transition: all 0.5s ease;
 }
-.nav:hover{
-  anchor-name:--some-anchor;
+.red{
+    background-color: rgb(114, 6, 6);
 }
-.anchor{
-    background-color: rgb(65, 64, 64);
-    border-radius: 20px;
-    position: absolute;
-    top:anchor(top);
-    left:anchor(left);
-    right:anchor(right);
-    bottom:anchor(bottom);
-    position-anchor: --some-anchor;
-    pointer-events: none;
-    mix-blend-mode: difference;
-    transition:all 0.3s linear;
+.blue{
+    background-color: rgb(28, 28, 145);
+}
+.green{
+    background-color: rgb(15, 82, 15);
+}
+.box:hover{
+    transform: scale(1.2) !important;
+}
+body:has(.box:hover) .box{
+    transform: scale(0.8);
 }
